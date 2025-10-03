@@ -1,0 +1,27 @@
+{
+  "name": "Asset Innovative Solutions",
+  "short_name": "AIS",
+  "description": "Advanced Intelligence Solutions - Your trusted partner in AI and technology innovation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/ais-logo-dark.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/ais-logo-dark.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["business", "productivity", "education"],
+  "lang": "en",
+  "dir": "ltr"
+}

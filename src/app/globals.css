@@ -1,0 +1,175 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    /* Light Mode - AIS Brand Colors */
+    --background: 0 0% 100%; /* White #FFFFFF */
+    --foreground: 210 40% 4%; /* Deep Navy #0A2540 */
+    --card: 210 40% 97%; /* Light Gray #F1F5F9 */
+    --card-foreground: 210 40% 4%; /* Deep Navy #0A2540 */
+    --popover: 0 0% 100%; /* White #FFFFFF */
+    --popover-foreground: 210 40% 4%; /* Deep Navy #0A2540 */
+    --primary: 221 83% 53%; /* Electric Blue #2563EB */
+    --primary-foreground: 0 0% 100%; /* White #FFFFFF */
+    --secondary: 0 0% 100%; /* White background */
+    --secondary-foreground: 210 40% 4%; /* Deep Navy #0A2540 */
+    --muted: 210 40% 97%; /* Light Gray #F1F5F9 */
+    --muted-foreground: 215 16% 35%; /* Darker Steel Gray for better contrast */
+    --accent: 210 40% 97%; /* Light Gray #F1F5F9 */
+    --accent-foreground: 210 40% 4%; /* Deep Navy #0A2540 */
+    --destructive: 0 84% 60%; /* Red #DC2626 */
+    --destructive-foreground: 0 0% 100%; /* White #FFFFFF */
+    --success: 174 72% 41%; /* Teal Green #14B8A6 */
+    --success-foreground: 0 0% 100%; /* White #FFFFFF */
+    --warning: 45 93% 47%; /* Amber #F59E0B */
+    --warning-foreground: 0 0% 100%; /* White #FFFFFF */
+    --info: 217 91% 60%; /* Blue #3B82F6 */
+    --info-foreground: 0 0% 100%; /* White #FFFFFF */
+    --border: 214 32% 91%; /* Light Gray #E2E8F0 */
+    --input: 214 32% 91%; /* Light Gray #E2E8F0 */
+    --ring: 221 83% 53%; /* Electric Blue #2563EB */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode - AIS Brand Colors */
+    --background: 210 40% 12%; /* Charcoal #1E293B */
+    --foreground: 0 0% 100%; /* White #FFFFFF */
+    --card: 210 40% 4%; /* Deep Navy #0A2540 */
+    --card-foreground: 0 0% 100%; /* White #FFFFFF */
+    --popover: 210 40% 4%; /* Deep Navy #0A2540 */
+    --popover-foreground: 0 0% 100%; /* White #FFFFFF */
+    --primary: 221 83% 53%; /* Electric Blue #2563EB */
+    --primary-foreground: 0 0% 100%; /* White #FFFFFF */
+    --secondary: 0 0% 0% / 0; /* Transparent */
+    --secondary-foreground: 0 0% 100%; /* White #FFFFFF */
+    --muted: 210 40% 4%; /* Deep Navy #0A2540 */
+    --muted-foreground: 210 40% 97%; /* Light Gray #F1F5F9 */
+    --accent: 210 40% 4%; /* Deep Navy #0A2540 */
+    --accent-foreground: 0 0% 100%; /* White #FFFFFF */
+    --destructive: 0 63% 31%; /* Red #F87171 background #7F1D1D */
+    --destructive-foreground: 0 0% 100%; /* White #FFFFFF */
+    --success: 174 72% 41%; /* Teal Green #14B8A6 background #115E59 */
+    --success-foreground: 0 0% 100%; /* White #FFFFFF */
+    --warning: 45 93% 47%; /* Amber #FBBF24 background #78350F */
+    --warning-foreground: 0 0% 100%; /* White #FFFFFF */
+    --info: 217 91% 60%; /* Blue #60A5FA background #1E3A8A */
+    --info-foreground: 0 0% 100%; /* White #FFFFFF */
+    --border: 215 16% 47%; /* Steel Gray #4A5568 */
+    --input: 215 16% 47%; /* Steel Gray #4A5568 */
+    --ring: 174 72% 41%; /* Teal Green #14B8A6 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans uppercase tracking-wide;
+  }
+  p, span, div, a, button, input, textarea, select {
+    @apply font-sans;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/20 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/30;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+.focus-visible {
+  @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+}
+
+/* AIS Design System Components */
+@layer components {
+  /* Alert Components */
+  .alert-success {
+    @apply bg-green-50 text-green-800 border border-green-200 dark:bg-green-900/20 dark:text-green-400 dark:border-green-800;
+  }
+  
+  .alert-error {
+    @apply bg-red-50 text-red-800 border border-red-200 dark:bg-red-900/20 dark:text-red-400 dark:border-red-800;
+  }
+  
+  .alert-warning {
+    @apply bg-amber-50 text-amber-800 border border-amber-200 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800;
+  }
+  
+  .alert-info {
+    @apply bg-blue-50 text-blue-800 border border-blue-200 dark:bg-blue-900/20 dark:text-blue-400 dark:border-blue-800;
+  }
+
+  /* Card Components */
+  .card-ais {
+    @apply bg-card text-card-foreground rounded-xl shadow-sm border border-border;
+  }
+  
+  .card-ais-dark {
+    @apply dark:shadow-lg dark:shadow-black/10;
+  }
+
+  /* Button Enhancements */
+  .btn-primary-ais {
+    @apply bg-electric-blue text-white hover:bg-blue-700 focus:ring-electric-blue;
+  }
+  
+  .btn-secondary-ais {
+    @apply bg-white text-deep-navy border border-deep-navy hover:bg-light-gray dark:bg-transparent dark:text-white dark:border-white dark:hover:bg-white/10;
+  }
+
+  /* Typography */
+  .heading-display {
+    @apply font-sans font-bold uppercase tracking-wide;
+  }
+  
+  .text-body {
+    @apply font-sans;
+  }
+  
+  .text-code {
+    @apply font-mono;
+  }
+
+  /* Hero Section Gradient */
+  .hero-gradient {
+    background: linear-gradient(135deg, #0A2540 0%, #1E293B 50%, #2563EB 100%);
+  }
+  
+  .dark .hero-gradient {
+    background: linear-gradient(135deg, #1E293B 0%, #0A2540 50%, #14B8A6 100%);
+  }
+
+  /* Hero Text Visibility */
+  .hero-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .hero-text-accent {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  }
+}
