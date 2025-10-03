@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 
 interface VideoBackgroundProps {
   headline?: string
@@ -30,6 +31,20 @@ const VideoBackground = ({
       
       {/* Dark Semi-Transparent Overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
+      
+      {/* Center Logo */}
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="relative">
+          <Image
+            src="/ais-logo-dark.png"
+            alt="AIS Logo"
+            width={300}
+            height={300}
+            className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+            priority
+          />
+        </div>
+      </div>
       
       {/* Bottom Left Text Content */}
       {showText && (

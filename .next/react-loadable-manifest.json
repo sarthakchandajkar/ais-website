@@ -1,8 +1,8 @@
 {
   "components/pages/Home.tsx -> @/components/VideoBackground": {
-    "id": 7774,
+    "id": "components/pages/Home.tsx -> @/components/VideoBackground",
     "files": [
-      "static/chunks/7774.e2e1779f896b8a62.js"
+      "static/chunks/_app-pages-browser_src_components_VideoBackground_tsx.js"
     ]
   }
 }

@@ -40,7 +40,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image 
-              src={isScrolled ? "/Canva Image (1).png" : "/ais-logo-dark.png"} 
+              src={isScrolled ? "/ais-logo-nobg.png" : "/ais-logo-dark.png"} 
               alt="Asset Innovative Solutions Logo" 
               width={80}
               height={80}
