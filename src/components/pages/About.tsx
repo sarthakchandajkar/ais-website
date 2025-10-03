@@ -194,7 +194,7 @@ const About = () => {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-sans font-bold text-white mb-6 hero-text">
-            Let's Build the Future Together
+            Let&apos;s Build the Future Together
           </h2>
           
           <p className="text-xl text-white/90 mb-8 hero-text">

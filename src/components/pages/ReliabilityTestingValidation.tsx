@@ -48,7 +48,9 @@ import {
   Beaker,
   FlaskConical,
   Zap as Lightning,
-  CheckSquare as Validation
+  CheckSquare as Validation,
+  TrendingUp,
+  DollarSign
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'

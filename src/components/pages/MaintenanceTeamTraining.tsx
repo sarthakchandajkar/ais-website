@@ -278,7 +278,7 @@ const MaintenanceTeamTraining = () => {
                   Maintenance Team Training is a comprehensive professional development program designed to equip maintenance teams with the knowledge, skills, and expertise needed to effectively implement and utilize predictive maintenance systems. Our training programs combine theoretical knowledge with practical hands-on experience.
                 </p>
                 <p>
-                  The training covers system operation, data interpretation, alert response procedures, and industry best practices. We offer certification programs with globally recognized credentials that validate team members' expertise and enhance their professional development.
+                  The training covers system operation, data interpretation, alert response procedures, and industry best practices. We offer certification programs with globally recognized credentials that validate team members&apos; expertise and enhance their professional development.
                 </p>
                 <p>
                   Our ongoing support ensures that teams stay updated with the latest technologies and methodologies, enabling them to maximize the value of predictive maintenance investments and achieve optimal operational results.

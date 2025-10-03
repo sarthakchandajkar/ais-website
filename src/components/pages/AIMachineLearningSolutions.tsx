@@ -294,7 +294,7 @@ const AIMachineLearningSolutions = () => {
                   Our solutions encompass predictive analytics, computer vision, natural language processing, and intelligent automation systems that learn from data patterns to continuously improve performance. These technologies enable organizations to make data-driven decisions, reduce operational costs, and enhance productivity.
                 </p>
                 <p>
-                  From predictive maintenance and quality control to process optimization and intelligent automation, our AI and ML solutions provide the intelligence needed to drive operational excellence and competitive advantage in today's digital industrial landscape.
+                  From predictive maintenance and quality control to process optimization and intelligent automation, our AI and ML solutions provide the intelligence needed to drive operational excellence and competitive advantage in today&apos;s digital industrial landscape.
                 </p>
               </div>
             </div>

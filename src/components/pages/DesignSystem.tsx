@@ -163,7 +163,7 @@ const DesignSystem = () => {
               <AlertIcon variant="info" />
               <AlertTitle>Information</AlertTitle>
               <AlertDescription>
-                Here's some helpful information about your current status.
+                Here&apos;s some helpful information about your current status.
               </AlertDescription>
             </Alert>
           </div>

@@ -291,7 +291,7 @@ const OurFounder = () => {
               </p>
               <div className="bg-gradient-to-r from-electric-blue/10 to-teal-green/10 p-6 rounded-xl border-l-4 border-electric-blue">
                 <blockquote className="text-lg italic text-foreground">
-                  "Partner with us to transform reliability into measurable value for your business."
+                  &ldquo;Partner with us to transform reliability into measurable value for your business.&rdquo;
                 </blockquote>
               </div>
             </div>

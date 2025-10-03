@@ -135,7 +135,7 @@ const VideoOptions = () => {
               <li>Custom analytics and tracking</li>
             </ul>
             <p className="text-sm text-gray-600 mt-3">
-              <strong>Note:</strong> You'll need to host the video file on your server and ensure it's optimized for web delivery.
+              <strong>Note:</strong> You&apos;ll need to host the video file on your server and ensure it&apos;s optimized for web delivery.
             </p>
           </div>
         )}

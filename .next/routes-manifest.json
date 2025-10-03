@@ -1,1 +1,227 @@
-{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[],"fallback":[]},"redirects":[{"source":"/:path+/","destination":"/:path+","permanent":true,"internal":true,"regex":"^(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))\\/$"}],"headers":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/ai-machine-learning-solutions",
+      "regex": "^/ai\\-machine\\-learning\\-solutions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ai\\-machine\\-learning\\-solutions(?:/)?$"
+    },
+    {
+      "page": "/big-data-analytics-platform",
+      "regex": "^/big\\-data\\-analytics\\-platform(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/big\\-data\\-analytics\\-platform(?:/)?$"
+    },
+    {
+      "page": "/cloud-infrastructure-services",
+      "regex": "^/cloud\\-infrastructure\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cloud\\-infrastructure\\-services(?:/)?$"
+    },
+    {
+      "page": "/condition-based-maintenance",
+      "regex": "^/condition\\-based\\-maintenance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/condition\\-based\\-maintenance(?:/)?$"
+    },
+    {
+      "page": "/condition-based-monitoring",
+      "regex": "^/condition\\-based\\-monitoring(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/condition\\-based\\-monitoring(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/data-management-storage",
+      "regex": "^/data\\-management\\-storage(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/data\\-management\\-storage(?:/)?$"
+    },
+    {
+      "page": "/digital-twin-technology",
+      "regex": "^/digital\\-twin\\-technology(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/digital\\-twin\\-technology(?:/)?$"
+    },
+    {
+      "page": "/failure-modes-effects-analysis",
+      "regex": "^/failure\\-modes\\-effects\\-analysis(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/failure\\-modes\\-effects\\-analysis(?:/)?$"
+    },
+    {
+      "page": "/failure-prediction-models",
+      "regex": "^/failure\\-prediction\\-models(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/failure\\-prediction\\-models(?:/)?$"
+    },
+    {
+      "page": "/human-reliability-analysis",
+      "regex": "^/human\\-reliability\\-analysis(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/human\\-reliability\\-analysis(?:/)?$"
+    },
+    {
+      "page": "/industry-4-solutions",
+      "regex": "^/industry\\-4\\-solutions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/industry\\-4\\-solutions(?:/)?$"
+    },
+    {
+      "page": "/iot-implementation-integration",
+      "regex": "^/iot\\-implementation\\-integration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/iot\\-implementation\\-integration(?:/)?$"
+    },
+    {
+      "page": "/maintenance-team-training",
+      "regex": "^/maintenance\\-team\\-training(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/maintenance\\-team\\-training(?:/)?$"
+    },
+    {
+      "page": "/our-founder",
+      "regex": "^/our\\-founder(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/our\\-founder(?:/)?$"
+    },
+    {
+      "page": "/predictive-analytics-platform",
+      "regex": "^/predictive\\-analytics\\-platform(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/predictive\\-analytics\\-platform(?:/)?$"
+    },
+    {
+      "page": "/predictive-maintenance",
+      "regex": "^/predictive\\-maintenance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/predictive\\-maintenance(?:/)?$"
+    },
+    {
+      "page": "/predictive-maintenance-planning",
+      "regex": "^/predictive\\-maintenance\\-planning(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/predictive\\-maintenance\\-planning(?:/)?$"
+    },
+    {
+      "page": "/process-automation-rpa",
+      "regex": "^/process\\-automation\\-rpa(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/process\\-automation\\-rpa(?:/)?$"
+    },
+    {
+      "page": "/professional-training",
+      "regex": "^/professional\\-training(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/professional\\-training(?:/)?$"
+    },
+    {
+      "page": "/real-time-monitoring",
+      "regex": "^/real\\-time\\-monitoring(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/real\\-time\\-monitoring(?:/)?$"
+    },
+    {
+      "page": "/reliability-centered-maintenance",
+      "regex": "^/reliability\\-centered\\-maintenance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reliability\\-centered\\-maintenance(?:/)?$"
+    },
+    {
+      "page": "/reliability-engineering",
+      "regex": "^/reliability\\-engineering(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reliability\\-engineering(?:/)?$"
+    },
+    {
+      "page": "/reliability-predictions-analysis",
+      "regex": "^/reliability\\-predictions\\-analysis(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reliability\\-predictions\\-analysis(?:/)?$"
+    },
+    {
+      "page": "/reliability-testing-validation",
+      "regex": "^/reliability\\-testing\\-validation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reliability\\-testing\\-validation(?:/)?$"
+    },
+    {
+      "page": "/root-cause-analysis",
+      "regex": "^/root\\-cause\\-analysis(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/root\\-cause\\-analysis(?:/)?$"
+    },
+    {
+      "page": "/services",
+      "regex": "^/services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services(?:/)?$"
+    },
+    {
+      "page": "/spare-parts-optimization",
+      "regex": "^/spare\\-parts\\-optimization(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/spare\\-parts\\-optimization(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

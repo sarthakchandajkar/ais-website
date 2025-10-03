@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"components/pages/Home.tsx -> @/components/VideoBackground\":{\"id\":\"components/pages/Home.tsx -> @/components/VideoBackground\",\"files\":[\"static/chunks/_app-pages-browser_src_components_VideoBackground_tsx.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST='{"components/pages/Home.tsx -> @/components/VideoBackground":{"id":7774,"files":["static/chunks/7774.e2e1779f896b8a62.js"]}}';

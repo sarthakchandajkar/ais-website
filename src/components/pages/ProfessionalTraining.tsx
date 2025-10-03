@@ -31,11 +31,9 @@ import {
   Smartphone,
   Cloud,
   BookOpen,
-  Certificate,
   Video,
   Headphones,
   Laptop,
-  PresentationChart,
   UserPlus,
   Star,
   Trophy,
@@ -51,7 +49,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const ProfessionalTraining = () => {
   const services = [
     {
-      icon: Certificate,
+      icon: Award,
       title: 'CMRP Certification Program',
       description: 'Comprehensive Certified Maintenance & Reliability Professional certification program designed to enhance technical expertise and career advancement.',
       features: [
@@ -126,7 +124,7 @@ const ProfessionalTraining = () => {
       accent: 'indigo-500'
     },
     {
-      icon: PresentationChart,
+      icon: BarChart3,
       title: 'Custom Training Solutions',
       description: 'Tailored training programs designed specifically for your organization\'s needs and industry requirements.',
       features: [

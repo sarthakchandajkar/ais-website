@@ -43,7 +43,12 @@ import {
   Eye,
   Smartphone,
   Wifi,
-  Cloud
+  Cloud,
+  Thermometer,
+  Droplets,
+  Volume2,
+  DollarSign,
+  Building
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
