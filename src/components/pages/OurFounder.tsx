@@ -1,85 +1,21 @@
 'use client'
 
 import React from 'react'
-import { Award, BookOpen, Users, Globe, Linkedin, Mail, Sparkles, ArrowRight, Target, Shield, Zap, Calendar, Building, GraduationCap, Briefcase, CheckCircle, Star, TrendingUp, Lightbulb } from 'lucide-react'
+import { Award, Users, Globe, Linkedin, Mail, Sparkles, ArrowRight, Target, Building, TrendingUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 const OurFounder = () => {
-  const timelineData = [
-    {
-      year: '1994–1996',
-      title: 'Design Engineer',
-      company: 'Greaves Limited, India',
-      description: 'Started career in mechanical design and engineering fundamentals',
-      icon: GraduationCap
-    },
-    {
-      year: '1996–2007',
-      title: 'Key Engineering & Reliability Roles',
-      company: 'Reliance Industries, India',
-      description: 'Contributed to commissioning of the world\'s largest grassroots refinery at Jamnagar',
-      icon: Building
-    },
-    {
-      year: '2007–2015',
-      title: 'Specialist & Team Lead',
-      company: 'BAPCO, Bahrain',
-      description: 'Implemented RCM/FMEA and led multi-million-dollar reliability improvement projects',
-      icon: Target
-    },
-    {
-      year: '2015–Present',
-      title: 'Lead Engineer (RCM-Reliability) & PdM Team Leader',
-      company: 'ORPIC/OQ, Oman',
-      description: 'Driving reliability improvement journeys, digital transformation, and machine learning adoption',
-      icon: TrendingUp
-    }
-  ]
-
-  const coreValues = [
-    {
-      icon: Shield,
-      title: 'Reliability',
-      description: 'Ensuring consistent performance and operational excellence'
-    },
-    {
-      icon: Zap,
-      title: 'Predictive Maintenance',
-      description: 'Leveraging data and AI for proactive maintenance strategies'
-    },
-    {
-      icon: BookOpen,
-      title: 'Professional Training',
-      description: 'Empowering teams with knowledge and best practices'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Industry 4.0 Solutions',
-      description: 'Implementing cutting-edge digital transformation technologies'
-    }
-  ]
-
-  const certifications = [
-    'CMRP (ISO 17024) - Certified Maintenance & Reliability Professional',
-    'Vibration Analysis – Level II (ISO 18436-2)',
-    'Machine Lubricant Analyst – MLA II (ISO 18436-4)',
-    'Meridium Certifications (RCM, FMEA, RCA, ASM, ASI)',
-    'GE System-1 Machinery Diagnostics',
-    'Emerson CSI Technology'
-  ]
-
   const stats = [
     { number: '30+', label: 'Years Experience', icon: Award },
     { number: '4', label: 'Major Companies', icon: Building },
     { number: '1000+', label: 'Professionals Trained', icon: Users },
-    { number: '$5M+', label: 'Cost Savings Delivered', icon: TrendingUp }
+    { number: '$100M+', label: 'Cost Savings Delivered', icon: TrendingUp }
   ]
 
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden hero-gradient">
+      <section className="relative py-20 md:py-32 flex items-center overflow-hidden hero-gradient">
         {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/20 to-transparent dark:from-charcoal/20"></div>
@@ -105,31 +41,23 @@ const OurFounder = () => {
                 Three decades of expertise in Reliability and Asset Management, driving innovation across industries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-deep-navy hover:bg-light-gray">
+                <Button size="lg" className="bg-electric-blue text-white border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-electric-blue/90 transition-all duration-300 transform hover:scale-105 shadow-lg uppercase tracking-wide" onClick={() => window.open('https://www.linkedin.com/in/abhay-chandajkar-238248b/', '_blank')}>
                   <Linkedin className="w-4 h-4 mr-2" />
-                  Connect on LinkedIn
+                  CONNECT ON LINKEDIN
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-deep-navy">
+                <Button size="lg" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg uppercase tracking-wide">
                   <Mail className="w-4 h-4 mr-2" />
-                  Contact the Founder
+                  CONTACT THE FOUNDER
                 </Button>
               </div>
             </div>
             <div className="relative">
-              <div className="w-80 h-80 mx-auto bg-gradient-to-br from-electric-blue to-teal-green rounded-2xl shadow-2xl flex items-center justify-center relative overflow-hidden">
-                {/* Professional photo placeholder */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/10 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-white/30 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-deep-navy">AC</span>
-                    </div>
-                    <div className="text-deep-navy text-lg font-semibold">Abhay Chandajkar</div>
-                    <div className="text-deep-navy text-sm">Founder & CEO</div>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                <Award className="w-12 h-12 text-deep-navy" />
+              <div className="w-96 h-96 mx-auto">
+                <img 
+                  src="/abhay-photo.png" 
+                  alt="Abhay Chandajkar - Founder & CEO" 
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
           </div>
@@ -153,275 +81,162 @@ const OurFounder = () => {
         </div>
       </section>
 
-      {/* Founder's Bio Section */}
+      {/* Letter from the Founder Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
-              <h2 className="text-4xl md:text-5xl font-sans font-bold text-foreground mb-8">About Abhay Chandajkar</h2>
-              <div className="space-y-6 text-lg text-steel-gray dark:text-muted-foreground leading-relaxed">
-                <p>
-                  <strong>Abhay Chandajkar</strong> is the Founder of Asset Innovative Solutions, bringing <strong>30 years of engineering and leadership experience</strong> in Asset Management, Reliability, and Predictive Maintenance.
-                </p>
-                <p>
-                  He has worked with <strong>Reliance Industries, BAPCO Bahrain, ORPIC Oman, and OQ</strong> in leadership positions, gaining extensive experience across the oil, gas, and petrochemical industries.
-                </p>
-                <p>
-                  Internationally certified in Vibration Analysis (ISO 18436-2), Certified Maintenance & Reliability Professional (CMRP), and Meridium tools (RCM, FMEA, RCA, ASM), Abhay is widely recognized as a <strong>trainer, mentor, and thought leader</strong> in Reliability and Maintenance.
-                </p>
-                <p>
-                  His expertise spans across multiple domains including digital transformation, machine learning adoption in maintenance, and implementing Industry 4.0 solutions that drive measurable business value.
-                </p>
-              </div>
-              <div className="mt-8">
-                <Button className="bg-electric-blue hover:bg-blue-700 text-white">
-                  View Full Profile
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <Card className="bg-gradient-to-br from-electric-blue to-teal-green text-white border-0 overflow-hidden">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                      <Target className="w-6 h-6 text-white" />
-                    </div>
-                    <CardTitle className="text-2xl font-sans font-bold text-white">Key Highlights</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="font-semibold text-white">Experience</div>
-                      <div className="text-white/90">30+ Years</div>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">Major Companies</div>
-                      <div className="text-white/90">Reliance, BAPCO, ORPIC, OQ</div>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">Cost Savings</div>
-                      <div className="text-white/90">$5M+ Delivered</div>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">Countries</div>
-                      <div className="text-white/90">India, Bahrain, Oman</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Journey & Achievements Timeline */}
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-sans font-bold text-foreground mb-6">Journey & Achievements</h2>
-            <p className="text-xl text-steel-gray dark:text-muted-foreground max-w-3xl mx-auto">
-              Three decades of excellence in reliability engineering and asset management
-            </p>
-          </div>
-          
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-electric-blue to-teal-green hidden lg:block"></div>
-            
-            <div className="space-y-12">
-              {timelineData.map((item, index) => (
-                <div key={index} className="relative flex items-start lg:items-center">
-                  {/* Timeline dot */}
-                  <div className="absolute left-6 w-4 h-4 bg-electric-blue rounded-full border-4 border-white shadow-lg z-10 hidden lg:block"></div>
-                  
-                  <div className="ml-0 lg:ml-16 flex-1">
-                    <Card className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
-                      <CardContent className="p-8">
-                        <div className="flex items-start gap-6">
-                          <div className="w-16 h-16 bg-gradient-to-br from-electric-blue to-teal-green rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <item.icon className="w-8 h-8 text-white" />
-                          </div>
-                          <div className="flex-1">
-                            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                              <div>
-                                <h3 className="text-2xl font-sans font-bold text-foreground mb-2">{item.title}</h3>
-                                <p className="text-lg font-semibold text-electric-blue">{item.company}</p>
-                              </div>
-                              <div className="text-sm font-bold text-steel-gray dark:text-muted-foreground bg-accent px-3 py-1 rounded-full mt-2 lg:mt-0">
-                                {item.year}
-                              </div>
-                            </div>
-                            <p className="text-steel-gray dark:text-muted-foreground leading-relaxed">
-                              {item.description}
-                            </p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vision for Asset Innovative Solutions */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-sans font-bold text-foreground mb-6">Vision for Asset Innovative Solutions</h2>
-            <p className="text-xl text-steel-gray dark:text-muted-foreground max-w-4xl mx-auto">
-              Abhay founded Asset Innovative Solutions to deliver cutting-edge solutions that transform how industries approach reliability and maintenance.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-sans font-bold text-foreground mb-8 text-center">Letter from the Founder</h2>
             <div className="space-y-6 text-lg text-steel-gray dark:text-muted-foreground leading-relaxed">
-              <p>
-                Abhay founded Asset Innovative Solutions to deliver <strong>cutting-edge Reliability Engineering, Predictive Maintenance, Professional Training, and Industry 4.0 solutions</strong> that drive measurable business value.
+              <p className="text-xl font-semibold text-foreground mb-8">
+                <strong>Dear Industry Leaders, Partners, and Colleagues,</strong>
               </p>
+              
               <p>
-                His vision is to <strong>empower industries in GCC, Oman, and India</strong> with reliable, safe, and sustainable operations through innovative technology and expert knowledge sharing.
+                I write this letter at a pivotal moment in industrial history. After three decades of working across the oil, gas, and petrochemical industries—from the refineries of Reliance Industries to the complex operations of BAPCO Bahrain, ORPIC Oman, and OQ—I have witnessed firsthand the transformative power of reliability engineering and predictive maintenance. Today, as we stand at the intersection of traditional industrial practices and the Fourth Industrial Revolution, I believe we have an unprecedented opportunity to redefine how industries approach asset management and operational excellence.
               </p>
+
               <p>
-                Abhay believes in <strong>knowledge sharing, proactive maintenance strategies, and innovation</strong> as key drivers of industrial growth and operational excellence.
+                The challenges facing our industries are more complex than ever before. Climate change demands sustainable operations. Economic pressures require unprecedented efficiency. Digital transformation promises new capabilities but also introduces new vulnerabilities. And perhaps most critically, the global skills gap in reliability engineering threatens to undermine our ability to maintain the infrastructure that powers modern civilization.
               </p>
-              <div className="bg-gradient-to-r from-electric-blue/10 to-teal-green/10 p-6 rounded-xl border-l-4 border-electric-blue">
-                <blockquote className="text-lg italic text-foreground">
-                  &ldquo;Partner with us to transform reliability into measurable value for your business.&rdquo;
+
+              <p>
+                Yet, in these challenges lie extraordinary opportunities. The same technologies that have revolutionized other sectors—artificial intelligence, machine learning, the Internet of Things, and advanced analytics—are now mature enough to transform industrial operations. When properly implemented, these technologies don't just improve efficiency; they fundamentally change how we think about reliability, maintenance, and asset management.
+              </p>
+
+              <div className="bg-gradient-to-r from-electric-blue/10 to-teal-green/10 p-8 rounded-xl border-l-4 border-electric-blue my-8">
+                <blockquote className="text-xl italic text-foreground font-medium">
+                  "The future belongs to organizations that can predict, prevent, and optimize—not just react, repair, and replace."
                 </blockquote>
               </div>
-            </div>
-            
-            <div className="relative">
-              <Card className="bg-gradient-to-br from-electric-blue to-teal-green text-white border-0 overflow-hidden">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                      <Lightbulb className="w-6 h-6 text-white" />
-                    </div>
-                    <CardTitle className="text-3xl font-sans font-bold text-white">Mission</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-xl text-white/90 leading-relaxed mb-6">
-                    To revolutionize industrial operations through innovative reliability solutions, predictive maintenance strategies, and comprehensive professional training programs.
-                  </p>
-                  <div className="border-t border-white/20 pt-6">
-                    <h4 className="text-xl font-semibold mb-4 text-white">Key Focus Areas</h4>
-                    <ul className="space-y-2 text-white/90">
-                      <li>• Digital transformation in maintenance</li>
-                      <li>• AI/ML adoption in industrial operations</li>
-                      <li>• Professional development and training</li>
-                      <li>• Sustainable and safe operations</li>
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Core Values */}
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-sans font-bold text-foreground mb-6">Core Values</h2>
-            <p className="text-xl text-steel-gray dark:text-muted-foreground max-w-3xl mx-auto">
-              The principles that guide our approach to reliability and innovation
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {coreValues.map((value, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden text-center">
-                <CardContent className="p-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-electric-blue to-teal-green rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-6">
-                    <value.icon className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-sans font-bold text-foreground mb-4">
-                    {value.title}
-                  </h3>
-                  <p className="text-steel-gray dark:text-muted-foreground leading-relaxed">
-                    {value.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+              <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">The Reliability Revolution</h3>
+              
+              <p>
+                When I founded Asset Innovative Solutions, I did so with a clear vision: to democratize access to world-class reliability engineering and predictive maintenance capabilities. For too long, these critical skills have been concentrated in a few large organizations with the resources to invest in cutting-edge technologies and training programs. Meanwhile, smaller and medium-sized enterprises—which form the backbone of industrial economies—have been left behind.
+              </p>
 
-      {/* Certifications & Expertise */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-sans font-bold text-foreground mb-6">Certifications & Expertise</h2>
-            <p className="text-xl text-steel-gray dark:text-muted-foreground max-w-3xl mx-auto">
-              Internationally recognized certifications and specialized expertise
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <div className="space-y-4">
-                {certifications.map((cert, index) => (
-                  <Card key={index} className="group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-electric-blue to-teal-green rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                          <CheckCircle className="w-6 h-6 text-white" />
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-lg font-semibold text-foreground group-hover:text-electric-blue transition-colors duration-200">
-                            {cert}
-                          </h3>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+              <p>
+                This is not just an economic issue; it's a safety issue, an environmental issue, and ultimately, a competitive issue. In today's interconnected global economy, a failure in one part of the supply chain can cascade across entire industries. The reliability of our industrial infrastructure is not just about individual company performance—it's about the resilience of our entire economic system.
+              </p>
+
+              <p>
+                The solution lies in what I call the "Reliability Revolution"—a fundamental shift from reactive maintenance to predictive, data-driven asset management. This revolution is built on three pillars: advanced analytics, professional development, and sustainable practices.
+              </p>
+
+              <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">The Power of Predictive Analytics</h3>
+              
+              <p>
+                During my tenure at major petrochemical companies, I've seen the evolution of maintenance strategies from "run-to-failure" to "preventive maintenance" to today's "predictive maintenance." Each transition has delivered significant value, but none more so than the current shift toward AI-powered predictive analytics.
+              </p>
+
+              <p>
+                Modern predictive maintenance systems can analyze vast amounts of data from sensors, maintenance records, and operational parameters to identify patterns that human analysts might miss. They can predict equipment failures weeks or even months in advance, allowing for planned maintenance that minimizes downtime and maximizes safety.
+              </p>
+
+              <p>
+                But the true power of these systems lies not just in their predictive capabilities, but in their ability to continuously learn and improve. As they process more data and encounter more scenarios, they become increasingly accurate and valuable. This creates a virtuous cycle where better predictions lead to better outcomes, which generate more data, which improves predictions even further.
+              </p>
+
+              <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">Bridging the Skills Gap</h3>
+              
+              <p>
+                However, technology alone is not enough. The success of any reliability program depends ultimately on the people who design, implement, and maintain it. This is why professional development and training are central to our mission at Asset Innovative Solutions.
+              </p>
+
+              <p>
+                Over the past decade, I've trained over 1,000 professionals across the GCC, Oman, and India in reliability engineering, predictive maintenance, and Industry 4.0 technologies. These professionals have gone on to implement programs that have saved their organizations millions of dollars while improving safety and environmental performance.
+              </p>
+
+              <p>
+                But training must be more than just knowledge transfer. It must be practical, hands-on, and directly applicable to real-world challenges. This is why our training programs combine theoretical knowledge with practical exercises, case studies, and hands-on experience with the latest tools and technologies.
+              </p>
+
+              <p>
+                Moreover, training must be ongoing. The pace of technological change in our field is accelerating, and professionals need continuous learning opportunities to stay current. This is why we've developed comprehensive certification programs and ongoing professional development opportunities that help our clients build internal capabilities that can evolve with changing technologies and requirements.
+              </p>
+
+              <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">Sustainability as a Competitive Advantage</h3>
+              
+              <p>
+                Perhaps the most significant shift I've observed in my career is the growing recognition that sustainability and profitability are not opposing forces, but complementary objectives. Companies that excel in environmental performance often also excel in operational efficiency, safety, and long-term profitability.
+              </p>
+
+              <p>
+                Predictive maintenance plays a crucial role in this convergence. By preventing equipment failures, we reduce waste, minimize environmental impacts, and extend asset life. By optimizing maintenance schedules, we reduce energy consumption and resource usage. And by improving reliability, we enable more efficient and sustainable operations.
+              </p>
+
+              <p>
+                This is particularly important in the oil, gas, and petrochemical industries, where environmental performance is under increasing scrutiny. Companies that can demonstrate superior environmental performance through data-driven reliability programs will have significant competitive advantages in the years ahead.
+              </p>
+
+              <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">The Future of Industrial Operations</h3>
+              
+              <p>
+                Looking ahead, I believe we are on the cusp of a new era in industrial operations—one characterized by unprecedented levels of automation, intelligence, and efficiency. The convergence of artificial intelligence, the Internet of Things, advanced analytics, and digital twin technologies will enable levels of operational excellence that were unimaginable just a few years ago.
+              </p>
+
+              <p>
+                But this future will not be realized automatically. It requires vision, investment, and most importantly, skilled professionals who can bridge the gap between traditional industrial practices and cutting-edge technologies. It requires organizations that are willing to embrace change and invest in their people. And it requires partnerships between technology providers, training organizations, and industrial companies.
+              </p>
+
+              <p>
+                This is the vision that drives Asset Innovative Solutions. We are not just a service provider; we are a partner in transformation. We work with our clients to develop comprehensive strategies that combine the latest technologies with proven methodologies, delivered by highly trained professionals who understand both the technical and business aspects of reliability engineering.
+              </p>
+
+              <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">A Call to Action</h3>
+              
+              <p>
+                The challenges facing our industries are significant, but they are not insurmountable. With the right combination of technology, training, and vision, we can build industrial operations that are not just more efficient and profitable, but also more sustainable, safe, and resilient.
+              </p>
+
+              <p>
+                The time for action is now. The technologies are mature. The methodologies are proven. The need is urgent. What we need is the vision and commitment to implement them at scale.
+              </p>
+
+              <p>
+                I invite you to join us in this journey. Whether you are a senior executive looking to transform your organization's approach to reliability, a maintenance professional seeking to develop new skills, or a technology provider looking to make a meaningful impact in industrial operations, there is a role for you in the Reliability Revolution.
+              </p>
+
+              <p>
+                Together, we can build industrial operations that are not just more efficient and profitable, but also more sustainable, safe, and resilient. We can create a future where equipment failures are rare, maintenance is optimized, and industrial operations contribute to rather than detract from environmental sustainability.
+              </p>
+
+              <p>
+                The future of industrial operations is bright, but it will not happen by itself. It requires vision, investment, and action. I believe that with the right partners and the right approach, we can achieve extraordinary results.
+              </p>
+
+              <div className="bg-gradient-to-r from-electric-blue/10 to-teal-green/10 p-8 rounded-xl border-l-4 border-teal-green my-8">
+                <p className="text-lg text-foreground font-medium">
+                  I look forward to working with you to make this vision a reality. The future of industrial operations starts today, and it starts with us.
+                </p>
               </div>
-            </div>
-            
-            <div className="relative">
-              <Card className="bg-gradient-to-br from-electric-blue to-teal-green text-white border-0 overflow-hidden">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                      <Star className="w-6 h-6 text-white" />
-                    </div>
-                    <CardTitle className="text-3xl font-sans font-bold text-white">Key Achievements</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-6">
-                    <div className="border-l-4 border-white/30 pl-4">
-                      <h4 className="text-xl font-semibold text-white mb-2">Lean Bad Actor Management Program</h4>
-                      <p className="text-white/90">Owner at OQ with savings of $5M+</p>
-                    </div>
-                    <div className="border-l-4 border-white/30 pl-4">
-                      <h4 className="text-xl font-semibold text-white mb-2">Industry Speaker</h4>
-                      <p className="text-white/90">PETROTECH, MAINTCON, METS, Bahrain Society of Engineers</p>
-                    </div>
-                    <div className="border-l-4 border-white/30 pl-4">
-                      <h4 className="text-xl font-semibold text-white mb-2">Professional Leadership</h4>
-                      <p className="text-white/90">Member and former Hon. Secretary of Institute of Engineers (India), Bahrain Chapter</p>
-                    </div>
-                    <div className="border-l-4 border-white/30 pl-4">
-                      <h4 className="text-xl font-semibold text-white mb-2">Thought Leadership</h4>
-                      <p className="text-white/90">Widely recognized trainer, mentor, and thought leader in Reliability and Maintenance</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+
+              <p className="text-xl font-semibold text-foreground mt-12">
+                <strong>Sincerely,</strong>
+              </p>
+              
+              {/* Signature */}
+              <div className="mt-6 mb-4">
+                <img 
+                  src="/abhay-signature.png" 
+                  alt="Abhay Chandajkar Signature" 
+                  className="h-24 w-auto -ml-32"
+                />
+              </div>
+              
+              <p className="text-xl font-semibold text-foreground">
+                <strong>Abhay Chandajkar<br/>
+                Founder & CEO<br/>
+                Asset Innovative Solutions</strong>
+              </p>
             </div>
           </div>
         </div>
       </section>
+
+
+
+
 
       {/* CTA Section */}
       <section className="py-20 hero-gradient">
@@ -442,13 +257,13 @@ const OurFounder = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-deep-navy hover:bg-light-gray">
+            <Button size="lg" className="bg-electric-blue text-white border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-electric-blue/90 transition-all duration-300 transform hover:scale-105 shadow-lg uppercase tracking-wide" onClick={() => window.open('https://www.linkedin.com/in/abhay-chandajkar-238248b/', '_blank')}>
               <Linkedin className="w-4 h-4 mr-2" />
-              Connect on LinkedIn
+              CONNECT ON LINKEDIN
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-deep-navy">
+            <Button size="lg" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg uppercase tracking-wide">
               <Mail className="w-4 h-4 mr-2" />
-              Contact the Founder
+              CONTACT THE FOUNDER
             </Button>
           </div>
         </div>

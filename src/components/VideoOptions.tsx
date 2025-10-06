@@ -4,25 +4,9 @@ import React, { useState } from 'react'
 import VideoPlayer from './VideoPlayer'
 
 const VideoOptions = () => {
-  const [activeTab, setActiveTab] = useState('youtube')
+  const [activeTab, setActiveTab] = useState('selfHosted')
 
   const videoOptions = {
-    youtube: {
-      title: "YouTube Embed (Optimized)",
-      description: "YouTube with parameters to minimize distractions",
-      component: (
-        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-slate-900">
-          <iframe
-            src="https://www.youtube.com/embed/H5_kV_xpJaU?rel=0&modestbranding=1&showinfo=0&controls=1&autoplay=0&loop=1&playlist=H5_kV_xpJaU&start=0&end=300&iv_load_policy=3&fs=1&cc_load_policy=0&disablekb=0&enablejsapi=1"
-            title="Reliability Engineering Services Overview"
-            className="absolute inset-0 w-full h-full"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </div>
-      )
-    },
     selfHosted: {
       title: "Self-Hosted Video",
       description: "Custom video player with full control",
@@ -107,21 +91,6 @@ const VideoOptions = () => {
       <div className="mt-8 p-6 bg-gray-50 rounded-lg">
         <h4 className="text-lg font-semibold mb-4">Implementation Guide</h4>
         
-        {activeTab === 'youtube' && (
-          <div className="space-y-3">
-            <p><strong>YouTube Parameters Used:</strong></p>
-            <ul className="list-disc list-inside space-y-1 text-sm">
-              <li><code>rel=0</code> - Disables related videos from other channels</li>
-              <li><code>modestbranding=1</code> - Reduces YouTube branding</li>
-              <li><code>showinfo=0</code> - Hides video title and uploader info</li>
-              <li><code>loop=1&playlist=VIDEO_ID</code> - Loops the video</li>
-              <li><code>start=0&end=300</code> - Sets start and end times (5 minutes)</li>
-              <li><code>iv_load_policy=3</code> - Disables annotations</li>
-              <li><code>fs=1</code> - Allows fullscreen</li>
-              <li><code>cc_load_policy=0</code> - Disables captions by default</li>
-            </ul>
-          </div>
-        )}
 
         {activeTab === 'selfHosted' && (
           <div className="space-y-3">

@@ -1,7 +1,8 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { ChevronRight, Settings, Zap, GraduationCap, Factory } from 'lucide-react'
+import { ChevronRight, Settings, Zap, GraduationCap, Factory, ShieldCheck, Activity, Cpu } from 'lucide-react'
+import Link from 'next/link'
 import dynamic from 'next/dynamic'
 
 // Dynamically import VideoBackground to prevent hydration issues
@@ -21,26 +22,26 @@ const Home = () => {
 
   const pillars = [
     {
-      icon: '⚙️',
+      icon: ShieldCheck,
       title: 'Reliability',
       description: 'Comprehensive reliability engineering solutions including Root Cause Analysis (RCA), Reliability Centered Maintenance (RCM), and asset optimization strategies.',
       features: ['Root Cause Analysis (RCA)', 'Reliability Centered Maintenance (RCM)', 'Asset Optimization', 'Performance Monitoring']
     },
     {
-      icon: '🔮',
+      icon: Activity,
       title: 'Predictive Maintenance',
       description: 'Advanced predictive maintenance solutions leveraging AI/ML algorithms, IoT sensors, and data analytics to predict equipment failures before they occur.',
       features: ['AI/ML Algorithms', 'IoT Sensor Integration', 'Data Analytics', 'Failure Prediction']
     },
     {
-      icon: '🎓',
-      title: 'Professional Training',
+      icon: GraduationCap,
+      title: 'Training',
       description: 'World-class certification programs including CMRP, SMRP, RCA, and RCM training with globally recognized credentials and expert-led courses.',
       features: ['CMRP Certification', 'SMRP Standards', 'RCA Training', 'RCM Programs']
     },
     {
-      icon: '🏭',
-      title: 'Industry 4.0 Solutions',
+      icon: Cpu,
+      title: 'Industry 4.0',
       description: 'Cutting-edge digital transformation solutions including IoT implementations, AI/ML integration, and smart manufacturing technologies.',
       features: ['IoT Implementation', 'Digital Transformation', 'Smart Manufacturing', 'Custom Software Development']
     }
@@ -73,12 +74,18 @@ const Home = () => {
         {/* Action Buttons - Bottom Left Below Text */}
         <div className="absolute bottom-20 sm:bottom-24 md:bottom-28 lg:bottom-32 xl:bottom-36 left-4 sm:left-6 md:left-8 lg:left-12 xl:left-16 z-10">
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4">
-            <button className="bg-electric-blue text-white border-2 border-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-electric-blue/90 transition-all duration-300 transform hover:scale-105 shadow-lg uppercase tracking-wide text-xs sm:text-sm md:text-base">
+            <Link 
+              href="/services"
+              className="bg-electric-blue text-white border-2 border-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-electric-blue/90 transition-all duration-300 transform hover:scale-105 shadow-lg uppercase tracking-wide text-xs sm:text-sm md:text-base inline-block text-center"
+            >
               LEARN MORE
-            </button>
-            <button className="border-2 border-white text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-white hover:text-deep-navy transition-all duration-300 uppercase tracking-wide text-xs sm:text-sm md:text-base">
+            </Link>
+            <Link 
+              href="/contact"
+              className="border-2 border-white text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-white/10 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg uppercase tracking-wide text-xs sm:text-sm md:text-base inline-block text-center"
+            >
               CONTACT US
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -103,44 +110,44 @@ const Home = () => {
       </section>
 
       {/* Pillars Section */}
-      <section className="py-20 bg-gradient-to-b from-card to-background">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-sans font-black text-foreground mb-6 uppercase tracking-wide">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-card to-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-black text-foreground mb-4 sm:mb-6 uppercase tracking-wide leading-tight break-words">
               Our Four Pillars of Excellence
             </h2>
-            <p className="text-xl text-steel-gray dark:text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-steel-gray dark:text-muted-foreground max-w-3xl mx-auto leading-relaxed break-words">
               Comprehensive solutions built on four foundational pillars driving industrial transformation
             </p>
           </div>
           
           {/* Pillars Slider */}
           <div className="bg-white/20 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto border border-white/30">
-            <div className="relative h-96">
+            <div className="relative min-h-[400px] sm:min-h-[450px] md:h-96">
               {pillars.map((pillar, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 p-8 transition-all duration-800 ${
+                  className={`absolute inset-0 p-4 sm:p-6 md:p-8 transition-all duration-800 ${
                     index === currentSlide
                       ? 'opacity-100 transform translate-x-0'
                       : 'opacity-0 transform translate-x-8'
                   }`}
                 >
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-electric-blue to-teal-green rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 shadow-lg">
-                      {pillar.icon}
+                  <div className="text-center h-full flex flex-col justify-center">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-electric-blue to-teal-green rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+                      <pillar.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-blue-600 dark:text-blue-400 transition-colors duration-300" />
                     </div>
-                    <h3 className="text-2xl font-sans font-bold text-foreground mb-4">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-sans font-bold text-foreground mb-3 sm:mb-4 break-words">
                       {pillar.title}
                     </h3>
-                    <p className="text-steel-gray dark:text-muted-foreground mb-6 leading-relaxed">
+                    <p className="text-sm sm:text-base md:text-lg text-steel-gray dark:text-muted-foreground mb-4 sm:mb-6 leading-relaxed break-words">
                       {pillar.description}
                     </p>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 max-w-full">
                       {pillar.features.map((feature, featureIndex) => (
                         <div
                           key={featureIndex}
-                          className="text-sm text-foreground bg-accent px-3 py-2 rounded-lg font-medium"
+                          className="text-xs sm:text-sm text-foreground bg-accent px-2 sm:px-3 py-2 rounded-lg font-medium break-words"
                         >
                           {feature}
                         </div>
@@ -152,45 +159,49 @@ const Home = () => {
             </div>
 
             {/* Navigation */}
-            <div className="flex bg-muted">
-              {pillars.map((pillar, index) => (
-                <button
-                  key={index}
-                  onClick={() => handlePillarClick(index)}
-                  className={`flex-1 p-4 text-center transition-all duration-300 ${
-                    index === currentSlide
-                      ? 'bg-electric-blue text-white'
-                      : 'text-steel-gray dark:text-muted-foreground hover:bg-accent'
-                  }`}
-                >
-                  <div className="text-lg mb-1">{pillar.icon}</div>
-                  <div className="text-xs font-medium">{pillar.title}</div>
-                </button>
-              ))}
+            <div className="bg-muted">
+              <div className="flex justify-between items-center p-2 sm:p-4">
+                {pillars.map((pillar, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handlePillarClick(index)}
+                    className={`flex-1 flex flex-col items-center justify-center p-2 sm:p-3 md:p-4 text-center transition-all duration-300 hover:scale-105 ${
+                      index === currentSlide
+                        ? 'bg-electric-blue text-blue-600 dark:text-blue-400'
+                        : 'text-steel-gray dark:text-muted-foreground hover:bg-accent'
+                    }`}
+                  >
+                    <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mb-1 flex items-center justify-center">
+                      <pillar.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                    </div>
+                    <div className="text-xs sm:text-sm font-medium break-words leading-tight text-center">{pillar.title}</div>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Quick Stats Section */}
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="py-12 sm:py-16 md:py-20 bg-card">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             <div className="text-center">
-              <div className="text-4xl font-sans font-bold text-electric-blue mb-2">15+</div>
-              <div className="text-steel-gray dark:text-muted-foreground">Years of Excellence</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-sans font-bold text-electric-blue mb-1 sm:mb-2">15+</div>
+              <div className="text-xs sm:text-sm md:text-base text-steel-gray dark:text-muted-foreground break-words">Years of Excellence</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-sans font-bold text-electric-blue mb-2">500+</div>
-              <div className="text-steel-gray dark:text-muted-foreground">Projects Completed</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-sans font-bold text-electric-blue mb-1 sm:mb-2">500+</div>
+              <div className="text-xs sm:text-sm md:text-base text-steel-gray dark:text-muted-foreground break-words">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-sans font-bold text-electric-blue mb-2">3</div>
-              <div className="text-steel-gray dark:text-muted-foreground">Countries Served</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-sans font-bold text-electric-blue mb-1 sm:mb-2">3</div>
+              <div className="text-xs sm:text-sm md:text-base text-steel-gray dark:text-muted-foreground break-words">Countries Served</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-sans font-bold text-electric-blue mb-2">100+</div>
-              <div className="text-steel-gray dark:text-muted-foreground">Professionals Trained</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-sans font-bold text-electric-blue mb-1 sm:mb-2">100+</div>
+              <div className="text-xs sm:text-sm md:text-base text-steel-gray dark:text-muted-foreground break-words">Professionals Trained</div>
             </div>
           </div>
         </div>

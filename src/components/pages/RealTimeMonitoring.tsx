@@ -266,6 +266,7 @@ const RealTimeMonitoring = () => {
         </div>
       </section>
 
+
       {/* What is Real-Time Monitoring Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-6">
@@ -288,35 +289,32 @@ const RealTimeMonitoring = () => {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-electric-blue/10 to-teal-green/10 rounded-3xl p-8">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-electric-blue rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Monitor className="w-8 h-8 text-black dark:text-white" />
-                    </div>
-                    <h3 className="text-lg font-sans font-bold text-foreground mb-2">Live Dashboards</h3>
-                    <p className="text-sm text-steel-gray">Real-time visualization</p>
+              <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-8 shadow-2xl">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-electric-blue to-teal-green rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <Monitor className="w-10 h-10 text-white" />
                   </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-teal-green rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Bell className="w-8 h-8 text-black dark:text-white" />
+                  <h3 className="text-2xl font-sans font-bold text-foreground mb-4">Real-Time Monitoring Dashboard</h3>
+                  <p className="text-steel-gray dark:text-muted-foreground mb-6">
+                    Comprehensive monitoring solution with live dashboards, instant alerts, and 24/7 equipment tracking
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span className="text-foreground">Live Status</span>
                     </div>
-                    <h3 className="text-lg font-sans font-bold text-foreground mb-2">Instant Alerts</h3>
-                    <p className="text-sm text-steel-gray">Immediate notifications</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-amber rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Wifi className="w-8 h-8 text-black dark:text-white" />
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span className="text-foreground">Data Streaming</span>
                     </div>
-                    <h3 className="text-lg font-sans font-bold text-foreground mb-2">Remote Access</h3>
-                    <p className="text-sm text-steel-gray">Monitor from anywhere</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-red rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Smartphone className="w-8 h-8 text-black dark:text-white" />
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                      <span className="text-foreground">Alerts Active</span>
                     </div>
-                    <h3 className="text-lg font-sans font-bold text-foreground mb-2">Mobile Ready</h3>
-                    <p className="text-sm text-steel-gray">Mobile app support</p>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      <span className="text-foreground">Analytics</span>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -376,23 +376,6 @@ const HumanReliabilityAnalysis = () => {
               </div>
             </div>
 
-            {/* Video Content */}
-            <div className="relative">
-              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-slate-900">
-                <iframe
-                  src="https://www.youtube.com/embed/H5_kV_xpJaU?rel=0&modestbranding=1&showinfo=0&controls=1&autoplay=0&loop=1&playlist=H5_kV_xpJaU&start=0&end=300&iv_load_policy=3&fs=1&cc_load_policy=0&disablekb=0&enablejsapi=1"
-                  title="Human Reliability Analysis Overview"
-                  className="absolute inset-0 w-full h-full"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              
-              {/* Video overlay elements for visual appeal */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-br from-electric-blue to-teal-green rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-br from-teal-green to-electric-blue rounded-full animate-pulse delay-1000"></div>
-            </div>
           </div>
         </div>
       </section>

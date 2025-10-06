@@ -276,23 +276,6 @@ const Industry4Solutions = () => {
               </div>
             </div>
 
-            {/* Video Content */}
-            <div className="relative">
-              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-slate-900">
-                <iframe
-                  src="https://www.youtube.com/embed/H5_kV_xpJaU?rel=0&modestbranding=1&showinfo=0&controls=1&autoplay=0&loop=1&playlist=H5_kV_xpJaU&start=0&end=300&iv_load_policy=3&fs=1&cc_load_policy=0&disablekb=0&enablejsapi=1"
-                  title="Industry 4.0 Solutions Overview"
-                  className="absolute inset-0 w-full h-full"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              
-              {/* Video overlay elements for visual appeal */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-br from-electric-blue to-teal-green rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-br from-teal-green to-electric-blue rounded-full animate-pulse delay-1000"></div>
-            </div>
           </div>
         </div>
       </section>
@@ -328,18 +311,17 @@ const Industry4Solutions = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden flex flex-col h-full">
-                <div className={`h-1 bg-gradient-to-r ${service.gradient}`}></div>
+              <Card key={index} className="group hover:bg-blue-50 dark:hover:bg-gray-800 hover:shadow-lg transition-shadow duration-300 p-6 rounded-2xl shadow-md bg-blue-50 dark:bg-gray-800 flex flex-col h-full">
                 <CardHeader className="pb-4">
                   <div className="flex items-start gap-4">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon className="w-8 h-8 text-deep-navy" />
+                    <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-2xl font-sans font-bold text-foreground mb-2">
+                      <CardTitle className="text-xl font-sans font-bold text-gray-900 dark:text-white mb-2 uppercase">
                         {service.title}
                       </CardTitle>
-                      <CardDescription className="text-steel-gray dark:text-muted-foreground leading-relaxed">
+                      <CardDescription className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                         {service.description}
                       </CardDescription>
                     </div>
@@ -348,137 +330,32 @@ const Industry4Solutions = () => {
                 <CardContent className="pt-0 flex flex-col h-full">
                   <div className="space-y-3 flex-1">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-3 group/item">
-                        <div className={`w-5 h-5 rounded-full bg-${service.accent} flex items-center justify-center flex-shrink-0`}>
-                          <CheckCircle className="w-3 h-3 text-deep-navy" />
+                      <div key={featureIndex} className="flex items-center gap-2">
+                        <div className="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-3 h-3 text-white" />
                         </div>
-                        <span className="text-foreground group-hover/item:text-electric-blue transition-colors duration-200">{feature}</span>
+                        <span className="text-sm text-gray-700 dark:text-gray-200">{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 pt-4 border-t border-border">
+                  <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-600">
                     {service.path ? (
                       <Link href={service.path}>
-                        <Button variant="outline" className="w-full group-hover:bg-electric-blue group-hover:text-white group-hover:border-electric-blue transition-all duration-300">
-                          Learn More
-                          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                        <Button className="w-full bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 rounded-full px-4 py-2 text-sm font-semibold">
+                          LEARN MORE
+                          <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
                       </Link>
                     ) : (
-                      <Button variant="outline" className="w-full group-hover:bg-electric-blue group-hover:text-white group-hover:border-electric-blue transition-all duration-300">
-                        Learn More
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      <Button className="w-full bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 rounded-full px-4 py-2 text-sm font-semibold">
+                        LEARN MORE
+                        <ArrowRight className="ml-2 w-4 h-4" />
                       </Button>
                     )}
                   </div>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Methodologies Section */}
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-sans font-bold text-foreground mb-6">
-              Our Methodologies
-            </h2>
-            <p className="text-xl text-steel-gray dark:text-muted-foreground max-w-3xl mx-auto">
-              Proven development approaches and best practices for Industry 4.0 implementation
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {methodologies.map((methodology, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden text-center">
-                <CardHeader className="pb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-electric-blue to-teal-green rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <methodology.icon className="w-8 h-8 text-deep-navy" />
-                  </div>
-                  <CardTitle className="text-xl font-sans font-bold text-foreground mb-3">
-                    {methodology.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-steel-gray dark:text-muted-foreground leading-relaxed">
-                    {methodology.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies & Standards Section */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-sans font-bold text-foreground mb-8">
-                Technologies & Standards
-              </h2>
-              <p className="text-lg text-steel-gray dark:text-muted-foreground leading-relaxed mb-8">
-                Our Industry 4.0 solutions leverage cutting-edge technologies and adhere to international standards for optimal performance and interoperability.
-              </p>
-              <div className="space-y-4">
-                {technologies.map((technology, index) => (
-                  <div key={index} className="flex items-start gap-3 p-4 bg-accent rounded-lg group hover:bg-electric-blue/10 transition-colors duration-200">
-                    <div className="w-2 h-2 bg-electric-blue rounded-full group-hover:bg-teal-green transition-colors duration-200 mt-2 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-foreground group-hover:text-electric-blue transition-colors duration-200">{technology.name}</h4>
-                      <p className="text-steel-gray dark:text-muted-foreground text-sm">{technology.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative">
-              <Card className="bg-gradient-to-br from-electric-blue to-teal-green text-white border-0 overflow-hidden">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                      <Award className="w-6 h-6 text-white" />
-                    </div>
-                    <CardTitle className="text-2xl font-sans font-bold text-white">Why Choose Our Expertise</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-white mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold text-white mb-1">Digital Transformation Experts</h4>
-                        <p className="text-white/90 text-sm">Proven track record in implementing Industry 4.0 solutions</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-white mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold text-white mb-1">Cutting-edge Technology</h4>
-                        <p className="text-white/90 text-sm">Latest tools and technologies for optimal performance</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-white mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold text-white mb-1">Scalable Solutions</h4>
-                        <p className="text-white/90 text-sm">Flexible architectures that grow with your business</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-white mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold text-white mb-1">24/7 Support</h4>
-                        <p className="text-white/90 text-sm">Round-the-clock technical support and maintenance</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
@@ -509,6 +386,40 @@ const Industry4Solutions = () => {
                 <h3 className="text-xl font-sans font-bold text-foreground mb-3">{item.title}</h3>
                 <p className="text-steel-gray dark:text-muted-foreground">{item.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Methodologies Section */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-sans font-bold text-foreground mb-6">
+              Our Methodologies
+            </h2>
+            <p className="text-xl text-steel-gray dark:text-muted-foreground max-w-3xl mx-auto">
+              Proven development approaches and best practices for Industry 4.0 implementation
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {methodologies.map((methodology, index) => (
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden text-center">
+                <CardHeader className="pb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-electric-blue to-teal-green rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <methodology.icon className="w-8 h-8 text-deep-navy" />
+                  </div>
+                  <CardTitle className="text-xl font-sans font-bold text-foreground mb-3">
+                    {methodology.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <p className="text-steel-gray dark:text-muted-foreground leading-relaxed">
+                    {methodology.description}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

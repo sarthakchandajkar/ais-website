@@ -10,7 +10,7 @@ const Services = () => {
   const services = [
     {
       icon: Settings,
-      title: 'Reliability Engineering',
+      title: 'RELIABILITY ENGINEERING',
       description: 'Comprehensive reliability engineering solutions to maximize equipment performance and minimize downtime.',
       features: [
         'Root Cause Analysis (RCA)',
@@ -20,13 +20,11 @@ const Services = () => {
         'Failure Mode Analysis',
         'Maintenance Strategy Development'
       ],
-      gradient: 'from-blue-600 to-blue-800',
-      accent: 'blue-600',
       path: '/reliability-engineering'
     },
     {
       icon: Zap,
-      title: 'Predictive Maintenance',
+      title: 'PREDICTIVE MAINTENANCE',
       description: 'Advanced predictive maintenance solutions leveraging cutting-edge AI/ML algorithms and IoT technologies.',
       features: [
         'AI/ML Algorithm Implementation',
@@ -36,13 +34,11 @@ const Services = () => {
         'Condition Monitoring Systems',
         'Maintenance Optimization'
       ],
-      gradient: 'from-cyan-500 to-blue-600',
-      accent: 'cyan-500',
       path: '/predictive-maintenance'
     },
     {
       icon: GraduationCap,
-      title: 'Professional Training',
+      title: 'PROFESSIONAL TRAINING',
       description: 'World-class certification programs with globally recognized credentials and expert-led courses.',
       features: [
         'CMRP Certification Programs',
@@ -52,13 +48,11 @@ const Services = () => {
         'Custom Training Solutions',
         'Online Learning Platforms'
       ],
-      gradient: 'from-indigo-500 to-blue-700',
-      accent: 'indigo-500',
       path: '/professional-training'
     },
     {
       icon: Factory,
-      title: 'Industry 4.0 Solutions',
+      title: 'INDUSTRY 4.0 SOLUTIONS',
       description: 'Cutting-edge digital transformation solutions for the connected industrial ecosystem.',
       features: [
         'IoT Implementation',
@@ -68,8 +62,6 @@ const Services = () => {
         'System Integration',
         'Data Analytics Platforms'
       ],
-      gradient: 'from-sky-500 to-blue-600',
-      accent: 'sky-500',
       path: '/industry-4-solutions'
     }
   ]
@@ -153,18 +145,17 @@ const Services = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
-                <div className="h-1 bg-white/20"></div>
+              <Card key={index} className="group hover:bg-blue-50 dark:hover:bg-gray-800 hover:shadow-lg transition-shadow duration-300 p-6 rounded-2xl shadow-md bg-blue-50 dark:bg-gray-800">
                 <CardHeader className="pb-4">
                   <div className="flex items-start gap-4">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-2xl font-sans font-bold text-foreground mb-2">
+                      <CardTitle className="text-xl font-sans font-bold text-gray-900 dark:text-white mb-2 uppercase">
                         {service.title}
                       </CardTitle>
-                      <CardDescription className="text-steel-gray dark:text-muted-foreground leading-relaxed">
+                      <CardDescription className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                         {service.description}
                       </CardDescription>
                     </div>
@@ -173,19 +164,19 @@ const Services = () => {
                 <CardContent className="pt-0">
                   <div className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-3 group/item">
-                        <div className={`w-5 h-5 rounded-full bg-${service.accent} flex items-center justify-center flex-shrink-0`}>
-                          <CheckCircle className="w-3 h-3 text-deep-navy" />
+                      <div key={featureIndex} className="flex items-center gap-2">
+                        <div className="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-3 h-3 text-white" />
                         </div>
-                        <span className="text-foreground group-hover/item:text-electric-blue transition-colors duration-200">{feature}</span>
+                        <span className="text-sm text-gray-700 dark:text-gray-200">{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 pt-4 border-t border-border">
+                  <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-600">
                     <Link href={service.path}>
-                      <Button variant="outline" className="w-full group-hover:bg-electric-blue group-hover:text-white group-hover:border-electric-blue transition-all duration-300 uppercase tracking-wide font-semibold">
+                      <Button className="w-full bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 rounded-full px-4 py-2 text-sm font-semibold">
                         LEARN MORE
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                        <ArrowRight className="ml-2 w-4 h-4" />
                       </Button>
                     </Link>
                   </div>

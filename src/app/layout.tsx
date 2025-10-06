@@ -3,6 +3,7 @@ import { Inter, Geist_Mono, Montserrat } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'sonner'
 import { AnalyticsProvider } from './analytics'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import Layout from '@/components/Layout'
 import './globals.css'
 
@@ -64,6 +65,7 @@ export default function RootLayout({
           </Layout>
           <Toaster position="top-right" />
           <AnalyticsProvider />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>

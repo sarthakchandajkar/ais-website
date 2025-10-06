@@ -45,7 +45,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@assetinnovativesolutions.com'],
+      details: ['info@ais-iot.com'],
       gradient: 'from-electric-blue to-teal-green'
     },
     {
@@ -67,20 +67,20 @@ const Contact = () => {
       country: 'United Arab Emirates',
       city: 'Dubai',
       address: 'Business Bay, Dubai, UAE',
-      email: 'info@assetinnovativesolutions.com'
+      email: 'info@ais-iot.com'
     },
     {
       country: 'Sultanate of Oman',
       city: 'Muscat',
       address: 'Al Qurum, Muscat, Oman',
-      email: 'info@assetinnovativesolutions.com'
+      email: 'info@ais-iot.com'
     }
   ]
 
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden hero-gradient">
+      <section className="relative py-20 flex items-center overflow-hidden hero-gradient min-h-[600px]">
         {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/20 to-transparent dark:from-charcoal/20"></div>
@@ -89,7 +89,7 @@ const Contact = () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <div className="mb-8">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <Sparkles className="w-4 h-4 text-teal-green" />
@@ -106,11 +106,11 @@ const Contact = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-deep-navy hover:bg-light-gray">
+            <Button className="w-full sm:w-auto bg-transparent border border-white text-white hover:bg-white hover:text-deep-navy transition-colors duration-300 rounded-full px-6 py-3 text-sm font-semibold">
               Start Your Project
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-deep-navy">
+            <Button className="w-full sm:w-auto bg-transparent border border-white text-white hover:bg-white hover:text-deep-navy transition-colors duration-300 rounded-full px-6 py-3 text-sm font-semibold">
               Schedule Consultation
             </Button>
           </div>
