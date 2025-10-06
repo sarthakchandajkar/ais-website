@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-6">
               <Image 
-                src="/Canva Image (1).png" 
+                src="/ais-logo-nobg.png" 
                 alt="Asset Innovative Solutions Logo" 
                 width={80}
                 height={80}

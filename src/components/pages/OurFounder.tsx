@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { Award, Users, Globe, Linkedin, Mail, Sparkles, ArrowRight, Target, Building, TrendingUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -53,9 +54,11 @@ const OurFounder = () => {
             </div>
             <div className="relative">
               <div className="w-96 h-96 mx-auto">
-                <img 
+                <Image 
                   src="/abhay-photo.png" 
                   alt="Abhay Chandajkar - Founder & CEO" 
+                  width={384}
+                  height={384}
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -100,12 +103,12 @@ const OurFounder = () => {
               </p>
 
               <p>
-                Yet, in these challenges lie extraordinary opportunities. The same technologies that have revolutionized other sectors—artificial intelligence, machine learning, the Internet of Things, and advanced analytics—are now mature enough to transform industrial operations. When properly implemented, these technologies don't just improve efficiency; they fundamentally change how we think about reliability, maintenance, and asset management.
+                Yet, in these challenges lie extraordinary opportunities. The same technologies that have revolutionized other sectors—artificial intelligence, machine learning, the Internet of Things, and advanced analytics—are now mature enough to transform industrial operations. When properly implemented, these technologies don&apos;t just improve efficiency; they fundamentally change how we think about reliability, maintenance, and asset management.
               </p>
 
               <div className="bg-gradient-to-r from-electric-blue/10 to-teal-green/10 p-8 rounded-xl border-l-4 border-electric-blue my-8">
                 <blockquote className="text-xl italic text-foreground font-medium">
-                  "The future belongs to organizations that can predict, prevent, and optimize—not just react, repair, and replace."
+                  &ldquo;The future belongs to organizations that can predict, prevent, and optimize—not just react, repair, and replace.&rdquo;
                 </blockquote>
               </div>
 
@@ -116,17 +119,17 @@ const OurFounder = () => {
               </p>
 
               <p>
-                This is not just an economic issue; it's a safety issue, an environmental issue, and ultimately, a competitive issue. In today's interconnected global economy, a failure in one part of the supply chain can cascade across entire industries. The reliability of our industrial infrastructure is not just about individual company performance—it's about the resilience of our entire economic system.
+                This is not just an economic issue; it&apos;s a safety issue, an environmental issue, and ultimately, a competitive issue. In today&apos;s interconnected global economy, a failure in one part of the supply chain can cascade across entire industries. The reliability of our industrial infrastructure is not just about individual company performance—it&apos;s about the resilience of our entire economic system.
               </p>
 
               <p>
-                The solution lies in what I call the "Reliability Revolution"—a fundamental shift from reactive maintenance to predictive, data-driven asset management. This revolution is built on three pillars: advanced analytics, professional development, and sustainable practices.
+                The solution lies in what I call the &ldquo;Reliability Revolution&rdquo;—a fundamental shift from reactive maintenance to predictive, data-driven asset management. This revolution is built on three pillars: advanced analytics, professional development, and sustainable practices.
               </p>
 
               <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">The Power of Predictive Analytics</h3>
               
               <p>
-                During my tenure at major petrochemical companies, I've seen the evolution of maintenance strategies from "run-to-failure" to "preventive maintenance" to today's "predictive maintenance." Each transition has delivered significant value, but none more so than the current shift toward AI-powered predictive analytics.
+                During my tenure at major petrochemical companies, I&apos;ve seen the evolution of maintenance strategies from &ldquo;run-to-failure&rdquo; to &ldquo;preventive maintenance&rdquo; to today&apos;s &ldquo;predictive maintenance.&rdquo; Each transition has delivered significant value, but none more so than the current shift toward AI-powered predictive analytics.
               </p>
 
               <p>
@@ -144,7 +147,7 @@ const OurFounder = () => {
               </p>
 
               <p>
-                Over the past decade, I've trained over 1,000 professionals across the GCC, Oman, and India in reliability engineering, predictive maintenance, and Industry 4.0 technologies. These professionals have gone on to implement programs that have saved their organizations millions of dollars while improving safety and environmental performance.
+                Over the past decade, I&apos;ve trained over 1,000 professionals across the GCC, Oman, and India in reliability engineering, predictive maintenance, and Industry 4.0 technologies. These professionals have gone on to implement programs that have saved their organizations millions of dollars while improving safety and environmental performance.
               </p>
 
               <p>
@@ -152,13 +155,13 @@ const OurFounder = () => {
               </p>
 
               <p>
-                Moreover, training must be ongoing. The pace of technological change in our field is accelerating, and professionals need continuous learning opportunities to stay current. This is why we've developed comprehensive certification programs and ongoing professional development opportunities that help our clients build internal capabilities that can evolve with changing technologies and requirements.
+                Moreover, training must be ongoing. The pace of technological change in our field is accelerating, and professionals need continuous learning opportunities to stay current. This is why we&apos;ve developed comprehensive certification programs and ongoing professional development opportunities that help our clients build internal capabilities that can evolve with changing technologies and requirements.
               </p>
 
               <h3 className="text-2xl font-bold text-foreground mt-12 mb-6">Sustainability as a Competitive Advantage</h3>
               
               <p>
-                Perhaps the most significant shift I've observed in my career is the growing recognition that sustainability and profitability are not opposing forces, but complementary objectives. Companies that excel in environmental performance often also excel in operational efficiency, safety, and long-term profitability.
+                Perhaps the most significant shift I&apos;ve observed in my career is the growing recognition that sustainability and profitability are not opposing forces, but complementary objectives. Companies that excel in environmental performance often also excel in operational efficiency, safety, and long-term profitability.
               </p>
 
               <p>
@@ -194,7 +197,7 @@ const OurFounder = () => {
               </p>
 
               <p>
-                I invite you to join us in this journey. Whether you are a senior executive looking to transform your organization's approach to reliability, a maintenance professional seeking to develop new skills, or a technology provider looking to make a meaningful impact in industrial operations, there is a role for you in the Reliability Revolution.
+                I invite you to join us in this journey. Whether you are a senior executive looking to transform your organization&apos;s approach to reliability, a maintenance professional seeking to develop new skills, or a technology provider looking to make a meaningful impact in industrial operations, there is a role for you in the Reliability Revolution.
               </p>
 
               <p>
@@ -217,9 +220,11 @@ const OurFounder = () => {
               
               {/* Signature */}
               <div className="mt-6 mb-4">
-                <img 
+                <Image 
                   src="/abhay-signature.png" 
                   alt="Abhay Chandajkar Signature" 
+                  width={200}
+                  height={96}
                   className="h-24 w-auto -ml-32"
                 />
               </div>
