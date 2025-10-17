@@ -79,7 +79,7 @@ const Contact = () => {
       icon: Mail,
       title: 'Email',
       subtitle: 'Get in touch with us',
-      description: 'Send us your inquiries and we\'ll respond within 24 hours',
+      description: 'Send us your inquiries and we&apos;ll respond within 24 hours',
       details: ['sarthak.chandajkar@assetinnovativeservices.com'],
       gradient: 'from-electric-blue to-teal-green',
       tag: 'Primary'
@@ -105,7 +105,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: 'Business Hours',
-      subtitle: 'When we\'re available',
+      subtitle: 'When we&apos;re available',
       description: 'Our team is ready to assist you during these hours',
       details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 9:00 AM - 2:00 PM', 'Sun: Closed'],
       gradient: 'from-teal-green to-electric-blue',
@@ -143,7 +143,7 @@ const Contact = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 shadow-lg border border-white/30">
               <MessageSquare className="w-5 h-5 text-white" />
-              <span className="text-sm font-semibold text-white">Let's Connect</span>
+              <span className="text-sm font-semibold text-white">Let&apos;s Connect</span>
             </div>
 
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8 text-white">
@@ -151,7 +151,7 @@ const Contact = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Ready to transform your operations? Let's discuss your requirements and explore how we can help you achieve operational excellence.
+              Ready to transform your operations? Let&apos;s discuss your requirements and explore how we can help you achieve operational excellence.
             </p>
 
             <div className="flex justify-center">
@@ -172,7 +172,7 @@ const Contact = () => {
               <div>
                 <h2 className="text-4xl font-bold text-slate-800 dark:text-white mb-6">Get in Touch</h2>
                 <p className="text-lg text-slate-700 dark:text-slate-400 mb-8">
-                  We're here to help you transform your operations. Reach out to us through any of these channels.
+                  We&apos;re here to help you transform your operations. Reach out to us through any of these channels.
                 </p>
               </div>
 
@@ -219,7 +219,7 @@ const Contact = () => {
                 <div className="mb-8">
                   <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Send us a Message</h3>
                   <p className="text-slate-800 dark:text-slate-400">
-                    Fill out the form below and we'll get back to you within 24 hours
+                    Fill out the form below and we&apos;ll get back to you within 24 hours
                   </p>
                 </div>
 
