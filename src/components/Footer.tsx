@@ -3,9 +3,16 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPin, Mail, Linkedin, Twitter, Facebook, Instagram, ArrowRight } from 'lucide-react'
+import { MapPin, Mail, Linkedin, Facebook, Instagram, MessageCircle, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import NewsletterSubscription from './NewsletterSubscription'
+
+// Custom X.com Logo Component
+const XLogo = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+  </svg>
+)
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -35,10 +42,11 @@ const Footer = () => {
   }
 
   const socialLinks = [
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/assetinnovativesolutions/' },
+    { name: 'X', icon: XLogo, href: 'https://x.com/ais_iot' },
     { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/assetinnovativesolutions/' },
+    { name: 'WhatsApp', icon: MessageCircle, href: 'https://wa.me/96891360424' },
   ]
 
   return (
@@ -64,7 +72,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-teal-green" />
-                <span className="text-muted-foreground">info@ais-iot.com</span>
+                <span className="text-muted-foreground">sarthak.chandajkar@assetinnovativeservices.com</span>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-teal-green mt-1" />
@@ -162,6 +170,8 @@ const Footer = () => {
                 <Link
                   key={index}
                   href={social.href}
+                  target={social.href.startsWith('http') ? '_blank' : undefined}
+                  rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-teal-green transition-colors duration-200 group"
                   aria-label={social.name}
                 >
