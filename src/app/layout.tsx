@@ -30,8 +30,8 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'AIS - Advanced Intelligence Solutions',
-  description: 'Advanced Intelligence Solutions - Your trusted partner in AI and technology innovation',
+  title: 'AIS - Asset Innovative Solutions',
+  description: 'Asset Innovative Solutions - Your trusted partner in AI and technology innovation',
   manifest: '/manifest.json',
   icons: {
     icon: [

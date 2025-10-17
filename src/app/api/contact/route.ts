@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
 
     const { data, error } = await resend.emails.send({
       from: emailTemplates.contactForm.from,
-      to: ['info@assetinnovative.com'],
+      to: ['sarthak.chandajkar@assetinnovativeservices.com'],
       subject: emailTemplates.contactForm.subject,
       html: emailHtml,
     })
