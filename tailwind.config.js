@@ -14,6 +14,18 @@ module.exports = {
         serif: ['Source Serif 4', 'serif'],
       },
       colors: {
+        // AIS brand colors — this file is the config Tailwind actually loads
+        // (tailwind.config.js wins over tailwind.config.ts).
+        'electric-blue': '#2563EB',
+        'teal-green': '#14B8A6',
+        'deep-navy': '#0A2540',
+        'charcoal': '#1E293B',
+        'steel-gray': '#4A5568',
+        'light-gray': '#F1F5F9',
+        'success': '#14B8A6',
+        'error': '#DC2626',
+        'warning': '#F59E0B',
+        'info': '#3B82F6',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

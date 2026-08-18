@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ais-website",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-08-18",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "workers_dev": true,
+  "vars": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://qjiapssdqvscnggaztpf.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFqaWFwc3NkcXZzY25nZ2F6dHBmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk3NDMzNzcsImV4cCI6MjA3NTMxOTM3N30.YvBhLZMGd92jJ1VzDIz9ojHo6B9eyUQdx_T09LyueNE"
+  }
+}

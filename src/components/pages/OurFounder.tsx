@@ -89,22 +89,22 @@ const OurFounder = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-sans font-bold text-foreground mb-8 text-center">Letter from the Founder</h2>
-            <div className="space-y-6 text-lg text-steel-gray dark:text-muted-foreground leading-relaxed">
+              <div className="space-y-6 text-lg text-steel-gray dark:text-muted-foreground leading-relaxed">
               <p className="text-xl font-semibold text-foreground mb-8">
                 <strong>Dear Industry Leaders, Partners, and Colleagues,</strong>
-              </p>
+                </p>
               
-              <p>
+                <p>
                 I write this letter at a pivotal moment in industrial history. After three decades of working across the oil, gas, and petrochemical industries—from the refineries of Reliance Industries to the complex operations of BAPCO Bahrain, ORPIC Oman, and OQ—I have witnessed firsthand the transformative power of reliability engineering and predictive maintenance. Today, as we stand at the intersection of traditional industrial practices and the Fourth Industrial Revolution, I believe we have an unprecedented opportunity to redefine how industries approach asset management and operational excellence.
-              </p>
+                </p>
 
-              <p>
+                <p>
                 The challenges facing our industries are more complex than ever before. Climate change demands sustainable operations. Economic pressures require unprecedented efficiency. Digital transformation promises new capabilities but also introduces new vulnerabilities. And perhaps most critically, the global skills gap in reliability engineering threatens to undermine our ability to maintain the infrastructure that powers modern civilization.
-              </p>
+                </p>
 
-              <p>
+                <p>
                 Yet, in these challenges lie extraordinary opportunities. The same technologies that have revolutionized other sectors—artificial intelligence, machine learning, the Internet of Things, and advanced analytics—are now mature enough to transform industrial operations. When properly implemented, these technologies don&apos;t just improve efficiency; they fundamentally change how we think about reliability, maintenance, and asset management.
-              </p>
+                </p>
 
               <div className="bg-gradient-to-r from-electric-blue/10 to-teal-green/10 p-8 rounded-xl border-l-4 border-electric-blue my-8">
                 <blockquote className="text-xl italic text-foreground font-medium">
@@ -211,9 +211,9 @@ const OurFounder = () => {
               <div className="bg-gradient-to-r from-electric-blue/10 to-teal-green/10 p-8 rounded-xl border-l-4 border-teal-green my-8">
                 <p className="text-lg text-foreground font-medium">
                   I look forward to working with you to make this vision a reality. The future of industrial operations starts today, and it starts with us.
-                </p>
-              </div>
-
+            </p>
+          </div>
+          
               <p className="text-xl font-semibold text-foreground mt-12">
                 <strong>Sincerely,</strong>
               </p>
@@ -227,8 +227,8 @@ const OurFounder = () => {
                   height={96}
                   className="h-24 w-auto -ml-32"
                 />
-              </div>
-              
+            </div>
+            
               <p className="text-xl font-semibold text-foreground">
                 <strong>Abhay Chandajkar<br/>
                 Founder & CEO<br/>

@@ -1,9 +1,10 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { ChevronRight, Settings, Zap, GraduationCap, Factory, ShieldCheck, Activity, Cpu } from 'lucide-react'
+import { ChevronRight, Settings, Zap, GraduationCap, Factory, ShieldCheck, Activity, Cpu, TrendingDown, AlertTriangle, Wrench, Target } from 'lucide-react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import PFCurveDiagram from '@/components/PFCurveDiagram'
 
 // Dynamically import VideoBackground to prevent hydration issues
 const VideoBackground = dynamic(() => import('@/components/VideoBackground'), {
@@ -134,8 +135,8 @@ const Home = () => {
                   }`}
                 >
                   <div className="text-center h-full flex flex-col justify-center">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-electric-blue to-teal-green rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
-                      <pillar.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-blue-600 dark:text-blue-400 transition-colors duration-300" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary to-teal-green rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+                      <pillar.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white transition-colors duration-300" />
                     </div>
                     <h3 className="text-lg sm:text-xl md:text-2xl font-sans font-bold text-foreground mb-3 sm:mb-4 break-words">
                       {pillar.title}
@@ -167,7 +168,7 @@ const Home = () => {
                     onClick={() => handlePillarClick(index)}
                     className={`flex-1 flex flex-col items-center justify-center p-2 sm:p-3 md:p-4 text-center transition-all duration-300 hover:scale-105 ${
                       index === currentSlide
-                        ? 'bg-electric-blue text-blue-600 dark:text-blue-400'
+                        ? 'bg-teal-green text-white'
                         : 'text-steel-gray dark:text-muted-foreground hover:bg-accent'
                     }`}
                   >
@@ -177,6 +178,95 @@ const Home = () => {
                     <div className="text-xs sm:text-sm font-medium break-words leading-tight text-center">{pillar.title}</div>
                   </button>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reliability Engineering Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-background to-card">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-black text-foreground mb-4 sm:mb-6 uppercase tracking-wide leading-tight break-words">
+              Reliability Engineering Excellence
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-steel-gray dark:text-muted-foreground max-w-4xl mx-auto leading-relaxed break-words">
+              Understanding asset degradation patterns and implementing optimal maintenance strategies through the P-F Curve methodology
+            </p>
+          </div>
+
+          {/* P-F Curve Diagram */}
+          <div className="mb-12">
+            <PFCurveDiagram />
+          </div>
+
+          {/* Key Concepts Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="bg-white/20 backdrop-blur-md rounded-xl p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                <TrendingDown className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-foreground mb-2 text-center">P-F Interval</h3>
+              <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                The critical window between detectable failure and functional failure, determining optimal maintenance timing
+              </p>
+            </div>
+
+            <div className="bg-white/20 backdrop-blur-md rounded-xl p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                <Target className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-foreground mb-2 text-center">Predictive Maintenance</h3>
+              <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                Early detection using advanced monitoring technologies to prevent failures before they occur
+              </p>
+            </div>
+
+            <div className="bg-white/20 backdrop-blur-md rounded-xl p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                <AlertTriangle className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-foreground mb-2 text-center">Preventive Maintenance</h3>
+              <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                Scheduled maintenance based on time or usage patterns to maintain optimal asset performance
+              </p>
+            </div>
+
+            <div className="bg-white/20 backdrop-blur-md rounded-xl p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                <Wrench className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-foreground mb-2 text-center">Corrective Maintenance</h3>
+              <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                Reactive maintenance after failure detection, typically more costly and disruptive
+              </p>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center">
+            <div className="bg-white/20 backdrop-blur-md rounded-2xl p-8 border border-white/30 shadow-lg max-w-3xl mx-auto">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
+                Optimize Your Asset Reliability Strategy
+              </h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Our reliability engineering experts help you implement the right maintenance strategies at the right time, 
+                maximizing asset performance while minimizing costs and downtime.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/reliability-engineering"
+                  className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg uppercase tracking-wide text-sm"
+                >
+                  Learn More About Reliability Engineering
+                </Link>
+                <Link 
+                  href="/contact"
+                  className="border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-lg uppercase tracking-wide text-sm"
+                >
+                  Get Expert Consultation
+                </Link>
               </div>
             </div>
           </div>
