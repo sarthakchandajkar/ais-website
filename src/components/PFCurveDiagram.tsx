@@ -341,7 +341,7 @@ const PFCurveDiagram: React.FC<PFCurveDiagramProps> = ({ className = '' }) => {
               y1={keyPoints.F.y}
               x2={keyPoints.F.x}
               y2={PLOT.bottom}
-              stroke="#2563EB"
+              stroke="#DC2626"
               strokeWidth="1.25"
               strokeDasharray="5 4"
             />
@@ -358,7 +358,7 @@ const PFCurveDiagram: React.FC<PFCurveDiagramProps> = ({ className = '' }) => {
             {/* Key point markers */}
             <circle cx={keyPoints.I.x} cy={keyPoints.I.y} r="6" fill="#3B82F6" />
             <circle cx={keyPoints.P.x} cy={keyPoints.P.y} r="6" fill="#3B82F6" />
-            <circle cx={keyPoints.F.x} cy={keyPoints.F.y} r="6" fill="#2563EB" />
+            <circle cx={keyPoints.F.x} cy={keyPoints.F.y} r="6" fill="#DC2626" />
 
             <text
               x={keyPoints.I.x}
@@ -386,7 +386,7 @@ const PFCurveDiagram: React.FC<PFCurveDiagramProps> = ({ className = '' }) => {
               textAnchor="middle"
               fontSize="16"
               fontWeight="700"
-              className="fill-current text-blue-600 dark:text-blue-400"
+              fill="#DC2626"
             >
               F
             </text>
@@ -472,7 +472,7 @@ const PFCurveDiagram: React.FC<PFCurveDiagramProps> = ({ className = '' }) => {
                   cx={point.x.toFixed(2)}
                   cy={point.y.toFixed(2)}
                   r={8}
-                  fill={point.id === 4 ? '#F59E0B' : '#3B82F6'}
+                  fill={point.id === 4 ? '#F59E0B' : point.id >= 5 ? '#DC2626' : '#3B82F6'}
                   className="cursor-pointer"
                   initial={false}
                   whileHover={{ scale: 1.15 }}
@@ -551,7 +551,7 @@ const PFCurveDiagram: React.FC<PFCurveDiagramProps> = ({ className = '' }) => {
                 onClick={() => setActivePoint(activePoint === point.id ? null : point.id)}
               >
                 <div
-                  className={`w-4 h-4 rounded-full shrink-0 ${point.id === 4 ? 'bg-orange-500' : 'bg-blue-500'}`}
+                  className={`w-4 h-4 rounded-full shrink-0 ${point.id === 4 ? 'bg-orange-500' : point.id >= 5 ? 'bg-red-600' : 'bg-blue-500'}`}
                 />
                 <span className="text-muted-foreground font-medium">
                   {index + 1}. {point.label}
